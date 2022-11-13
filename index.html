@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #col div{
+            height: 100px;
+            width: 100px;
+            border-radius: 100px;
+        }
+        #col{
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+        }
+    </style>
+    <script>
+        function Getcolor(colorName){
+            switch(colorName){
+                case "pink":
+                document.getElementById("pic").src="./public/image/girlsP.jpg";
+                break;
+                case "blue":
+                document.getElementById("pic").src="./public/image/girlsB.jpg";
+                break;
+                case "yellow":
+                document.getElementById("pic").src="./public/image/girlsy.jpg";
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+        <img src="./public/image/heroine.png" width="500" height="600" id="pic">
+    <div id="col">
+        <div style="background-color: pink;"id="pink" onmouseover="Getcolor(this.id)"></div>
+        <div style="background-color: blue;"id="blue" onmouseover="Getcolor(this.id)"></div>
+        <div style="background-color: yellow;" id="yellow" onmouseover="Getcolor(this.id)"></div>
+    </div>
+    </div>
+</body>
+</html>
