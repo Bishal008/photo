@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function GetDetails(msg){
-            document.querySelector("h1").innerHTML = msg;
+        function getdetials(e){
+          var pic = document.querySelector("img");
+          pic.style.position="fixed";
+          pic.style.left = e.touches[0].clientX +"px";
+          pic.style.top = e.touches[0].clientY + "px";
         }
     </script>
 </head>
 <body>
-    <img ontouchstart="GetDetails('20% OFF on Electronics')" src="./public/image/a1.jpg" width="100" height="100">
-    <img ontouchstart="GetDetails('60% OFF on Car Cleaning Accessories')" src="./public/image/a2.jpg" width="100" height="100">
-    <h1></h1>
+    <img src="./public/image/indflag.webp" ontouchmove ="getdetials(event)" width="100" height="100">
 </body>
 </html>
